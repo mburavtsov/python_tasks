@@ -14,6 +14,8 @@ def fixed_XOR(source, cipher):
     bytes1, bytes2 = unhexlify(source), unhexlify(cipher)
 
     xor_bytes = bytes([b1 ^ b2 for b1, b2 in zip(bytes1, bytes2)])
+    print(bytes([b1 ^ b2 for b1, b2 in zip(bytes1, bytes2)]))
+
     result = hexlify(xor_bytes).decode('ascii')
 
     return result
